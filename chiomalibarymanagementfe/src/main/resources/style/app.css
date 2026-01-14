@@ -1,0 +1,63 @@
+.root {
+    -fx-font-family: Segoe UI;
+    -fx-padding: 10;
+    -fx-background-color: #f6f8fa;
+}
+
+.header {
+    -fx-font-size: 24px;
+    -fx-padding: 15;
+    -fx-font-weight: bold;
+    -fx-background-color: #2d3436;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-pref-height: 60px;
+    -fx-max-width: infinity;
+}
+
+.table-view {
+    -fx-background-color: white;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-padding: 10 18;
+    -fx-background-radius: 8;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+#addBtn {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+
+#updateBtn {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+}
+
+#deleteBtn {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+}
+
+#refreshBtn {
+    -fx-background-color: #8e44ad;
+    -fx-text-fill: white;
+}
+
+#searchField {
+    -fx-font-size: 14px;
+    -fx-padding: 6 8;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #bdc3c7;
+}
+
+#clearSearchBtn {
+    -fx-background-color: #e67e22;
+    -fx-text-fill: white;
+}

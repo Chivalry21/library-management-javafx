@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.chiomalibarymanagementfe.chiomalibarymanagementfe.controller.LibraryController">
+
+    <!--  TOP: Header + Search -->
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Label text="📚 Library Management System"
+                   styleClass="header"/>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Search:"/>
+                <TextField fx:id="searchField" promptText="Enter title, author or ISBN" HBox.hgrow="ALWAYS"/>
+                <Button text="Clear" fx:id="clearSearchBtn" onAction="#handleClearSearch"/>
+            </HBox>
+
+        </VBox>
+    </top>
+
+    <!-- CENTER: Table  -->
+    <center>
+        <TableView fx:id="bookTable">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="colTitle" text="Title" prefWidth="200"/>
+                <TableColumn fx:id="colAuthor" text="Author" prefWidth="180"/>
+                <TableColumn fx:id="colIsbn" text="ISBN" prefWidth="140"/>
+                <TableColumn fx:id="colDate" text="Published Date" prefWidth="140"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- BOTTOM: Form + Buttons -->
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Title:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="titleField" promptText="Book title"
+                           GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Author:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="authorField" promptText="Author name"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="ISBN:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="isbnField" promptText="ISBN Number"
+                           GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Published Date:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="dateField" promptText="YYYY-MM-DD"
+                           GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <HBox spacing="10">
+                <Button text="Add" fx:id="addBtn" onAction="#handleAdd"/>
+                <Button text="Update" fx:id="updateBtn" onAction="#handleUpdate"/>
+                <Button text="Delete" fx:id="deleteBtn" onAction="#handleDelete"/>
+                <Button text="Refresh" fx:id="refreshBtn" onAction="#handleRefresh"/>
+            </HBox>
+
+        </VBox>
+    </bottom>
+
+</BorderPane>
